@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#350819">
+<title>A Birthday Surprise for Samiya</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;padding:20px 14px;background:radial-gradient(circle at top,#7c1742,#260714 60%,#10040c);color:#fff3e8;font-family:Georgia,serif;display:flex;align-items:center;justify-content:center}
+.card{width:min(100%,520px);position:relative;border:1px solid #d8a65c;border-radius:25px;overflow:hidden;background:linear-gradient(160deg,#3b071b,#170610);box-shadow:0 18px 60px #0009}
+.content{padding:28px 20px;text-align:center;background:radial-gradient(circle at 50% 0,#7a1741,#210714 70%)}
+.kicker{color:#ffd88a;letter-spacing:3px;font-size:12px;text-transform:uppercase}
+h1{font-size:clamp(34px,9vw,52px);margin:12px 0;color:#ffe1a2;text-shadow:0 0 18px #ffb34d77}
+.name{font-size:clamp(38px,10vw,58px);font-weight:bold;font-style:italic;color:#ff8bc4;text-shadow:0 0 16px #ff4b9a88;margin:10px 0}
+.ribbon{display:inline-block;padding:9px 20px;border:1px solid #ffcf83;border-radius:999px;background:linear-gradient(90deg,#8b153b,#c52b5d,#8b153b);font-size:18px}
+.date{color:#ffd88a;font-size:17px;margin:16px 0}.decor{font-size:28px;letter-spacing:6px;margin:18px 0}
+.message{font-size:16px;line-height:1.7;color:#fff0f5;margin:22px auto;max-width:410px}
+.signature{font-size:27px;color:#ffd88a;font-style:italic;margin:14px 0 4px}.forever{font-size:20px;color:#ff8bc4}
+.cover{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(145deg,#a51e4b,#5c0928 48%,#250714);transform-origin:top center;transition:transform 1.15s cubic-bezier(.2,.75,.2,1),opacity .9s ease}
+.cover:before,.cover:after{content:"";position:absolute;inset:13px;border:1px solid #e9b66e;border-radius:18px;pointer-events:none}.cover:after{inset:21px;border:1px dashed #ffb8d3;opacity:.5}
+.cover-inner{position:relative;z-index:1}.bow{font-size:55px}.cover h2{font-size:clamp(32px,8vw,48px);color:#ffe0a1;margin:14px 0}.cover-name{font-size:clamp(38px,10vw,58px);font-weight:bold;color:#ff9acb;text-shadow:0 0 18px #ff4d9b}
+.tap,.replay{padding:13px 22px;border:1px solid #ffe0a1;border-radius:999px;background:#250714;color:#fff;font-size:16px;font-weight:bold;cursor:pointer;box-shadow:0 0 18px #ff7bb966}
+.tap{margin-top:22px}.hint{font-size:13px;color:#ffe6ef;margin-top:13px}
+.card.open .cover{transform:rotateX(105deg) translateY(-20px);opacity:0;pointer-events:none}
+.replay{font-size:14px;margin-top:12px}
+</style>
+</head>
+<body>
+<main class="card" id="card">
+<section class="content">
+<div class="kicker">A day made special</div>
+<h1>Happy Birthday</h1>
+<div class="ribbon">My Dear Wife</div>
+<div class="name">SAMIYA ❤️</div>
+<div class="date">♡ November 28, 2012 ♡</div>
+<div class="decor">🌹 ✨ 💖 ✨ 🌹</div>
+<div class="decor">🎂 🎁 🧸 💍</div>
+<p class="message">May Allah bless you with endless happiness, good health, success, and a beautiful life. May all your dreams come true. Always keep smiling—you are so special to me. ❤️</p>
+<div class="signature">Mahim + Samiya</div>
+<div class="forever">Together Forever ♾️</div>
+<div class="decor">💗 🌹 💗</div>
+<button class="replay" type="button" onclick="replayCard()">Close the cover</button>
+</section>
+<section class="cover">
+<div class="cover-inner">
+<div class="bow">🎀</div><div class="kicker">A special surprise</div>
+<h2>For My Dear Wife</h2><div class="cover-name">SAMIYA ❤️</div>
+<div class="decor">🌹 💝 🌹</div>
+<button class="tap" type="button" onclick="openCard()">✧ TAP TO REVEAL ✧</button>
+<div class="hint">Your birthday surprise is waiting...</div>
+</div>
+</section>
+</main>
+<script>
+function openCard(){document.getElementById('card').classList.add('open')}
+function replayCard(){document.getElementById('card').classList.remove('open')}
+</script>
+</body>
+</html>
