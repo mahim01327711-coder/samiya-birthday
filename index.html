@@ -1,60 +1,108 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Happy Birthday Samiya</title>
+<title>Happy Birthday Samiya ❤️</title>
 <style>
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:linear-gradient(135deg,#260714,#851b48);font-family:Georgia,serif;color:white;padding:15px;box-sizing:border-box}
-.card{width:100%;max-width:430px;min-height:570px;position:relative;overflow:hidden;border:2px solid #e8b96e;border-radius:24px;background:linear-gradient(150deg,#510c2a,#210714);text-align:center;box-shadow:0 15px 45px #0008}
-.inside{padding:30px 18px}
-h1{color:#ffdda0;font-size:38px}
-.name{font-size:48px;color:#ff91c5;font-style:italic}
-.ribbon{display:inline-block;padding:10px 22px;border:1px solid #ffd58a;border-radius:30px;color:#ffe1a4}
-.date{color:#ffd58a;font-size:18px}
-.decor{font-size:30px;margin:20px 0}
-.message{line-height:1.7;font-size:17px}
-.signature{font-size:27px;color:#ffd58a;font-style:italic}
-.forever{color:#ff91c5;font-size:21px}
-.cover{position:absolute;inset:0;z-index:2;display:grid;place-items:center;padding:25px;box-sizing:border-box;background:linear-gradient(145deg,#a51e4b,#5c0928,#250714);transition:transform 1.2s ease,opacity 1s ease;transform-origin:top}
-.cover:before{content:"";position:absolute;inset:13px;border:2px solid #e8b96e;border-radius:17px}
-.coverContent{position:relative}
-.cover h2{font-size:37px;color:#ffe1a0}
-.coverName{font-size:48px;color:#ff9acb}
-button{padding:14px 23px;border:1px solid #ffe0a1;border-radius:30px;background:#280817;color:white;font-size:16px;font-weight:bold;margin-top:22px}
-.open .cover{transform:rotateX(110deg);opacity:0;pointer-events:none}
+*{box-sizing:border-box}
+body{
+ margin:0;min-height:100vh;padding:25px 12px;
+ display:grid;place-items:center;
+ font-family:Georgia,serif;color:white;
+ background:radial-gradient(circle,#9b3b91,#35104f,#100820);
+ overflow-x:hidden;
+}
+.card{
+ width:100%;max-width:440px;text-align:center;
+ padding:24px 17px;border-radius:28px;
+ border:2px solid #ffe5a0;
+ background:linear-gradient(145deg,#51105f,#a52d78,#32104d);
+ box-shadow:0 0 25px #ff9de1,0 0 55px #a94cff;
+ position:relative;overflow:hidden;
+}
+h1{color:#fff0a5;font-size:36px;text-shadow:0 0 15px gold}
+.name{font-size:43px;color:#ffc0e8;text-shadow:0 0 18px #ff6acb}
+.ribbon{font-size:20px;color:#ffe8a6}
+.photo{
+ width:85%;max-width:300px;height:350px;
+ object-fit:cover;border-radius:24px;
+ border:4px solid #ffe5a0;
+ box-shadow:0 0 25px #ff9cde;
+ margin:20px auto;
+}
+.decor{font-size:30px;margin:15px 0}
+.cake{font-size:75px;filter:drop-shadow(0 0 12px gold)}
+.message{font-size:17px;line-height:1.8}
+.signature{font-size:26px;color:#ffe7a0}
+.forever{font-size:22px;color:#ffc0e8}
+button{
+ padding:13px 22px;border:1px solid #ffe5a0;
+ border-radius:30px;background:#81236d;
+ color:white;font-size:16px;margin:10px;
+ box-shadow:0 0 15px #ff8bdc;
+}
+#cover{
+ position:fixed;inset:0;z-index:5;
+ display:grid;place-items:center;padding:20px;
+ background:linear-gradient(145deg,#230b43,#9b287d,#260b49);
+ text-align:center;transition:1s;
+}
+.coverbox{
+ max-width:400px;width:100%;padding:30px 15px;
+ border:2px solid #ffe5a0;border-radius:28px;
+ box-shadow:0 0 30px #ff8bdc;
+}
+#cover h2{color:#fff0a5;font-size:35px}
+#cover.hide{opacity:0;visibility:hidden;transform:scale(1.2)}
+.sparkle{animation:glow 1s infinite alternate}
+@keyframes glow{to{filter:brightness(1.8);transform:scale(1.08)}}
+.float{animation:float 3s infinite ease-in-out}
+@keyframes float{50%{transform:translateY(-12px)}}
 </style>
 </head>
 <body>
-<main class="card" id="card">
-<section class="inside">
-<div class="decor">🌹 ✨ 💖 ✨ 🌹</div>
-<h1>Happy Birthday</h1>
-<div class="ribbon">My Dear Wife</div>
-<div class="name">SAMIYA ❤️</div>
-<p class="date">♡ November 28, 2012 ♡</p>
-<div class="decor">🎂 🎁 🧸 💍</div>
-<p class="message">May Allah bless you with endless happiness, good health and success. May all your dreams come true. Always keep smiling. You are so special! ❤️</p>
-<div class="signature">Mahim + Samiya</div>
-<div class="forever">Together Forever ♾️</div>
-<div class="decor">💗 🌹 💗</div>
-<button onclick="closeCard()">Close Cover 🎀</button>
-</section>
-<section class="cover">
-<div class="coverContent">
-<div style="font-size:60px">🎀</div>
-<p style="color:#ffd58a;letter-spacing:3px">A SPECIAL SURPRISE</p>
-<h2>For My Dear Wife</h2>
-<div class="coverName">SAMIYA ❤️</div>
-<div class="decor">🌹 💝 🌹</div>
-<button onclick="openCard()">TAP TO REVEAL 🎁</button>
-<p>Your birthday surprise is waiting...</p>
+
+<div id="cover">
+ <div class="coverbox">
+  <div class="sparkle" style="font-size:45px">✨💖✨</div>
+  <div style="font-size:65px">🎁</div>
+  <p style="color:#ffe5a0;letter-spacing:3px">A SPECIAL SURPRISE</p>
+  <h2>For Samiya ❤️</h2>
+  <p>Someone special has a birthday!</p>
+  <button onclick="openCard()">TAP TO OPEN 💌</button>
+ </div>
 </div>
-</section>
+
+<main class="card">
+ <div class="decor sparkle">🎈✨🌹💖🌹✨🎈</div>
+ <h1>Happy Birthday!</h1>
+ <div class="ribbon">A Special Day For</div>
+ <div class="name">SAMIYA ❤️</div>
+
+ <img class="photo" src="samia.jpg" alt="Samiya">
+
+ <div class="cake float">🎂</div>
+ <div class="decor">🎉🌹🦋💐🦋🌹🎉</div>
+
+ <p class="message">
+ May Allah bless you with endless happiness,
+ good health and success. May all your dreams
+ come true. Keep smiling and shining always! ❤️
+ </p>
+
+ <div class="decor sparkle">💖✨🌸✨💖</div>
+ <div class="signature">Mahim + Samiya</div>
+ <div class="forever">Together Forever ♾️</div>
+ <p style="color:#ffe5a0">November 28, 2012</p>
+ <div class="decor">🎈🎊🎁🎊🎈</div>
 </main>
+
 <script>
-function openCard(){document.getElementById('card').classList.add('open')}
-function closeCard(){document.getElementById('card').classList.remove('open')}
+function openCard(){
+ document.getElementById('cover').classList.add('hide');
+}
 </script>
 </body>
 </html>
